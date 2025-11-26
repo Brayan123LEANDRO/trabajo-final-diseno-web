@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Helados Brayan G - Productos</title>
-<link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helados Brayan G - Nuestros Sabores</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-<nav>
-<h1>🍦 Helados Brayan G</h1>
-<ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="productos.html">Productos</a></li>
-<li><a href="sobre.html">Sobre Nosotros</a></li>
-<li><button id="tema-btn">🌞/🌙</button></li>
-</ul>
-</nav>
-</header>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Helados Brayan G</div>
+      <button class="hamburger" id="hamburger">☰</button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html" class="active">Productos</a></li>
+        <li><a href="sobre.html">Sobre Nosotros</a></li>
+        <li><button id="tema-btn" aria-label="Cambiar tema">Modo Oscuro/Claro</button></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="galeria">
-<h2>Nuestros Sabores</h2>
-<div class="grid-productos">
-<div class="tarjeta">
-<img src="img/HELADO-DE-CHOCOLATE.jpg" alt="Helado de chocolate">
-<h3>Chocolate</h3>
-</div>
-<div class="tarjeta">
-<img src="img/FRESA.avif" alt="Helado de fresa">
-<h3>Fresa</h3>
-</div>
-<div class="tarjeta">
-<img src="img/vainilla.jpg" alt="Helado de vainilla">
-<h3>Vainilla</h3>
-</div>
-</div>
-</div>
-</section>
+  <section class="galeria">
+    <h2>Nuestros Sabores Estrella</h2>
+    <div class="grid-productos">
+      <div class="tarjeta" data-sabor="Chocolate">
+        <img src="img/HELADO-DE-CHOCOLATE.jpg" alt="Helado de chocolate">
+        <h3>Chocolate Intenso</h3>
+        <p>El favorito de siempre, puro cacao premium</p>
+      </div>
+      <div class="tarjeta" data-sabor="Fresa">
+        <img src="img/FRESA.avif" alt="Helado de fresa">
+        <h3>Fresa Natural</h3>
+        <p>Fresas frescas de temporada</p>
+      </div>
+      <div class="tarjeta" data-sabor="Vainilla">
+        <img src="img/vainilla.jpg" alt="Helado de vainilla">
+        <h3>Vainilla Bourbon</h3>
+        <p>Con vainas reales de Madagascar</p>
+      </div>
+      <!-- Puedes agregar más fácil -->
+    </div>
+  </section>
 
-<footer>
-<p>© 2025 Helados Brayan G 🍧</p>
-</footer>
+  <footer>
+    <p>© 2025 Helados Brayan G · Hecho con mucho frío y cariño</p>
+  </footer>
 
-<script src="/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

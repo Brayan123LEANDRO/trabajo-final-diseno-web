@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Helados Brayan G - Sobre Nosotros</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helados Brayan G - Sobre Nosotros</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-<nav>
-<h1>🍦 Helados Brayan G</h1>
-<ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="productos.html">Productos</a></li>
-<li><a href="sobre.html">Sobre Nosotros</a></li>
-<li><button id="tema-btn">🌞/🌙</button></li>
-</ul>
-</nav>
-</header>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Helados Brayan G</div>
+      <button class="hamburger" id="hamburger">Menú</button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="sobre.html" class="active">Sobre Nosotros</a></li>
+        <li><button id="tema-btn" aria-label="Cambiar tema">Modo Oscuro/Claro</button></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="sobre">
-<h2>Nuestra Historia</h2>
-<p>Somos una heladería familiar que desde 1990 ofrece sabores únicos elaborados artesanalmente con amor y los mejores ingredientes.</p>
-<p>Nos apasiona endulzar momentos especiales con nuestros deliciosos helados.</p>
-</section>
+  <section class="sobre">
+    <div class="contenido-sobre">
+      <h2>Nuestra Historia</h2>
+      <p>
+        Somos una heladería familiar fundada en <strong>1990</strong> por Don Brayan y su esposa Gloria.
+        Lo que empezó como un pequeño local en el barrio se convirtió en el lugar favorito de generaciones
+        gracias a una receta secreta y al amor que ponemos en cada cucharada.
+      </p>
+      <p>
+        Todos nuestros helados son <strong>se hacen artesanalmente</strong> todos los días, usando solo ingredientes
+        naturales: leche fresca, frutas de temporada y el mejor cacao del mundo. Nada de colorantes ni conservantes.
+      </p>
+      <p>
+        Hoy seguimos con la misma pasión de siempre: endulzar tus momentos especiales y hacer que cada día
+        tenga un poquito más de felicidad fría.
+      </p>
 
-<footer>
-    <p>© 2025 Helados Brayan G 🍧</p>
-</footer>
+      <div class="valores">
+        <div class="valor">
+          <span>Hecho a mano</span>
+          <p>Cada helado se prepara con cariño</p>
+        </div>
+        <div class="valor">
+          <span>Ingredientes naturales</span>
+          <p>Solo lo mejor entra en nuestra receta</p>
+        </div>
+        <div class="valor">
+          <span>30+ años de tradición</span>
+          <p>Desde 1990 haciendo sonreír</p>
+        </div>
+      </div>
+    </div>
 
-<script src="/script.js"></script>
+    <div class="imagen-sobre">
+      <img src="img/heladeria.jpg" alt="Nuestra heladería familiar">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Helados Brayan G · Hecho con mucho frío y cariño</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

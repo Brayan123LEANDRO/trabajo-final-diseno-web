@@ -1,22 +1,52 @@
+// Menú hamburguesa
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
 
-const btnTema = document.getElementById('tema-btn');
-let modoOscuro = false;
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
 
-btnTema.addEventListener('click', () => {
-if (!modoOscuro) {
-document.documentElement.style.setProperty('--bg', '#fdc2e6ff');
-document.documentElement.style.setProperty('--text', '#000000ff');
-modoOscuro = true;
+// Tema claro/oscuro (guarda preferencia)
+const temaBtn = document.getElementById('tema-btn');
+const root = document.documentElement;
+
+const temaOscuro = () => {
+  root.style.setProperty('--bg', '#1a1a2e');
+  root.style.setProperty('--text', '#eee');
+  root.style.setProperty('--accent', '#ff69b4');
+  root.style.setProperty('--card', '#16213e');
+  temaBtn.textContent = 'Modo Claro';
+  localStorage.setItem('tema', 'oscuro');
+};
+
+const temaClaro = () => {
+  root.style.setProperty('--bg', '#fff1f8');
+  root.style.setProperty('--text', '#333');
+  root.style.setProperty('--accent', '#ff1493');
+  root.style.setProperty('--card', '#fff');
+  temaBtn.textContent = 'Modo Oscuro';
+  localStorage.setItem('tema', 'claro');
+};
+
+temaBtn.addEventListener('click', () => {
+  if (localStorage.getItem('tema') === 'oscuro') {
+    temaClaro();
+  } else {
+    temaOscuro();
+  }
+});
+
+// Cargar tema guardado
+if (localStorage.getItem('tema') === 'oscuro') {
+  temaOscuro();
 } else {
-document.documentElement.style.setProperty('--bg', '#fffaf0');
-document.documentElement.style.setProperty('--text', '#000000ff');
-modoOscuro = false;
+  temaClaro();
 }
-});
 
-
+// Efecto click en tarjetas
 document.querySelectorAll('.tarjeta').forEach(tarjeta => {
-tarjeta.addEventListener('click', () => {
-alert(`¡Estás viendo el sabor ${tarjeta.querySelector('h3').textContent}! 🍦`);
-});
+  tarjeta.addEventListener('click', () => {
+    const sabor = tarjeta.dataset.sabor || tarjeta.querySelector('h3').textContent;
+    alert(`¡Delicioso! Elegiste ${sabor} 🍦✨`);
+  });
 });
